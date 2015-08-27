@@ -30,15 +30,16 @@
 
     <div class="blog-masthead">
       <div class="container">
-        <form class="navbar-form navbar-right" role="form">
+        {!! Form::open(array('class' => 'navbar-form navbar-right')) !!}
+            {!! Form::token() !!}
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+                {!! Form::text('email', NULL, array('class' => 'form-control', 'placeholder' => 'Email')) !!}
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+                {!! Form::text('email', NULL, array('class' => 'form-control', 'placeholder' => 'Password')) !!}
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-        </form>
+            {!! Form::submit('Sign in', ['class' => 'btn btn-success']) !!}
+        {!! Form::close() !!}
         <nav class="blog-nav">
           <a class="blog-nav-item active" href="#">Home</a>
           <a class="blog-nav-item" href="#">New features</a>

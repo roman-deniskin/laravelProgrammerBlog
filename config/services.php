@@ -34,5 +34,11 @@ return [
         'key'    => '',
         'secret' => '',
     ],
+    
+    'facebook' => [
+    'client_id' => '965409923500467',
+    'client_secret' => '5bb75d0c0e686a674b97db115142a40f',
+    'redirect' => 'http://magento.ru/page',
+    ],
 
 ];

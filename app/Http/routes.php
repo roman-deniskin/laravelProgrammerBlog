@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('page');
 });
+
+Route::resource('page', 'ArticleResourceController');
+
+Route::get('redirectToProvider', function () {
+    return Socialize::with('facebook')->redirect();
+});
+
+Route::get('handleProviderCallback', function () {
+    $user = Socialize::with('facebook')->user();
+    // $user->token;
+});

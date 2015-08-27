@@ -143,7 +143,9 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        'SleepingOwl\Admin\AdminServiceProvider',
+        'SleepingOwl\Admin\AdminServiceProvider',//Для работы админки
+        'Laravel\Socialite\SocialiteServiceProvider',//Для подключения плагина работы с соц сетями
+        Collective\Html\HtmlServiceProvider::class,//Для работы форм
 
     ],
 
@@ -192,15 +194,18 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Admin'         => 'SleepingOwl\Admin\Admin',
-        'AdminAuth'     => 'SleepingOwl\AdminAuth\Facades\AdminAuth',
-        'Column'        => 'SleepingOwl\Admin\Columns\Column',
-        'ColumnFilter'  => 'SleepingOwl\Admin\ColumnFilters\ColumnFilter',
-        'Filter'        => 'SleepingOwl\Admin\Filter\Filter',
-        'AdminDisplay'  => 'SleepingOwl\Admin\Display\AdminDisplay',
-        'AdminForm'     => 'SleepingOwl\Admin\Form\AdminForm',
-        'AdminTemplate' => 'SleepingOwl\Admin\Templates\Facade\AdminTemplate',
-        'FormItem'      => 'SleepingOwl\Admin\FormItems\FormItem',
+        'Admin'         => 'SleepingOwl\Admin\Admin',//Для работы админки
+        'AdminAuth'     => 'SleepingOwl\AdminAuth\Facades\AdminAuth',//Для работы админки
+        'Column'        => 'SleepingOwl\Admin\Columns\Column',//Для работы админки
+        'ColumnFilter'  => 'SleepingOwl\Admin\ColumnFilters\ColumnFilter',//Для работы админки
+        'Filter'        => 'SleepingOwl\Admin\Filter\Filter',//Для работы админки
+        'AdminDisplay'  => 'SleepingOwl\Admin\Display\AdminDisplay',//Для работы админки
+        'AdminForm'     => 'SleepingOwl\Admin\Form\AdminForm',//Для работы админки
+        'AdminTemplate' => 'SleepingOwl\Admin\Templates\Facade\AdminTemplate',//Для работы админки
+        'FormItem'      => 'SleepingOwl\Admin\FormItems\FormItem',//Для работы админки
+        'Socialize' => 'Laravel\Socialite\Facades\Socialite',//Для работы плагина соц. сетей
+        'Form' => Collective\Html\FormFacade::class,//Для работы форм
+        'Html' => Collective\Html\HtmlFacade::class,//Для работы форм
 
     ],
 
